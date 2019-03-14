@@ -2,9 +2,8 @@ from sets import Set
 
 FILE_PATH = 'input.txt'
 
-f = open(FILE_PATH, 'r')
-ids = [list(id.strip()) for id in f]
-f.close()
+with open(FILE_PATH, 'r') as f:
+    ids = [list(id.strip()) for id in f]
 
 def find_one_off(list_1, list_2):
     diff = 0

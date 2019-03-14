@@ -1,8 +1,7 @@
 from sets import Set
 
-f = open('input.txt')
-num_list = [int(n) for n in f]
-f.close()
+with open('input.txt') as f:
+    num_list = [int(n) for n in f]
 
 sum = 0
 sum_set = Set([])

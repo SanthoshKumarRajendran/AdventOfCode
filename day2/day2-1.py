@@ -19,9 +19,8 @@ def check_for_double_and_triple(id):
 
     return double_present, triple_present
 
-f = open(FILE_PATH, 'r')
-ids = [id.strip() for id in f]
-f.close()
+with open(FILE_PATH, 'r') as f:
+    ids = [id.strip() for id in f]
 
 double_count = 0
 triple_count = 0
