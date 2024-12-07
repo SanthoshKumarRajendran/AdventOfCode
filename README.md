@@ -1,2 +1,2 @@
 # AdventOfCode
-My solutions for Advent of Code 2018 problems
+My solutions for Advent of Code problems
