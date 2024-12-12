@@ -1,5 +1,4 @@
 from itertools import combinations
-from pprint import pprint
 
 f = open('input.txt', 'r')
 
@@ -15,9 +14,6 @@ for line in f:
                 antenna_positions[char_list[y]].append((x,y))
     x += 1
 
-# pprint(city_map)
-# pprint(antenna_positions)
-
 ##################################################################
 
 valid_x_coordinate = range(len(city_map))
@@ -26,7 +22,6 @@ anti_node_positions = set([])
 
 for antenna in antenna_positions.keys():
     if len(antenna_positions[antenna]) > 1:
-        # print(f"Process anti-nodes for antenna: {antenna}")
         combos = combinations(antenna_positions[antenna], 2)
         for combo in combos:
             first, second = combo
@@ -36,5 +31,4 @@ for antenna in antenna_positions.keys():
             if ((second[0] - x_diff) in valid_x_coordinate) and ((second[1] - y_diff) in valid_y_coordinate):
                 anti_node_positions.add((second[0] - x_diff, second[1] - y_diff))
 
-pprint(anti_node_positions)
 print(len(anti_node_positions))

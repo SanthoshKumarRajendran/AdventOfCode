@@ -1,6 +1,5 @@
 from copy import deepcopy
 from enum import Enum
-from pprint import pprint
 
 f = open('input.txt', 'r')
 
@@ -107,7 +106,6 @@ for i, j in obstacle_positions_candidates:
             break
         except LoopDetectedException:
             obstacle_positions_that_cause_loop += 1
-            print(f"({i},{j}) will trigger loop. position_count: {obstacle_positions_that_cause_loop}")
             break            
 
 print(obstacle_positions_that_cause_loop)

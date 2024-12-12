@@ -37,7 +37,6 @@ def find_text(found_count, x_pos, y_pos, path):
     for x,y in valid_neighbors(x_pos, y_pos, path):
         if char_grid[x][y] == next_char_to_find:
             if found_count == 3:
-                print(f"Path: {path + [(x,y)]}")
                 SEARCH_TEXT_COUNT += 1
                 return
             else:

@@ -1,5 +1,3 @@
-from pprint import pprint
-
 f = open('input.txt', 'r')
 
 ordering_rules_asc = {} # { 'no': set('no.s that should come after')}

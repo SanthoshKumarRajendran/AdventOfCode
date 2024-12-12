@@ -1,5 +1,4 @@
 from itertools import combinations
-from pprint import pprint
 
 f = open('input.txt', 'r')
 
@@ -24,7 +23,6 @@ anti_node_positions = set([])
 
 for antenna in antenna_positions_dict.keys():
     if len(antenna_positions_dict[antenna]) > 1:
-        # print(f"Process anti-nodes for antenna: {antenna}")
         combos = combinations(antenna_positions_dict[antenna], 2)
         for combo in combos:
             first, second = combo
